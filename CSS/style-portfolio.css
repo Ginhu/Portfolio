@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./Assets/25328.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+section#menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(39, 39, 42);
+  align-items: center;
+  padding: 1vw;
+  color: rgb(219, 170, 24);
+}
+
+section#menu h2 {
+  font-size: 2vw;
+}
+
+section#menu h2:hover {
+  color: rgb(225, 98, 31);
+}
+
+section#menu nav {
+  display: flex;
+  padding: 1vw;
+}
+
+section#menu nav div {
+  display: flex;
+}
+
+section#menu nav div a {
+  text-decoration: none;
+  font-size: 1.5vw;
+  padding: 1vw;
+  color: rgb(219, 170, 24);
+  font-weight: 600;
+}
+
+section#menu nav div a:hover {
+  text-decoration: none;
+  font-size: 1.5vw;
+  padding: 1vw;
+  color: rgb(225, 98, 31);
+  font-weight: 600;
+}
+
+header section.perfil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  padding: 5vw;
+  height: 50vw;
+  position: relative;
+}
+
+header section img#foto {
+  display: flex;
+  border-radius: 50%;
+  width: 20vw;
+  justify-content: center;
+  box-shadow: 12px 12px 15px 0px black;
+  position: absolute;
+  top: 15%;
+}
+
+header section.perfil h1 {
+  padding: 1vw;
+  color: aqua;
+  font-size: 2.1vw;
+  position: absolute;
+  bottom: 20%;
+}
+
+header section.perfil p {
+  color: aqua;
+  font-size: 1.6vw;
+  font-weight: 400;
+  position: absolute;
+  bottom: 15%;
+}
+
+main section#sobremim {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(39, 39, 42);
+  flex-direction: column;
+  /*  margin: 0 15vw; */
+}
+
+main section#sobremim h2.h2sobremim {
+  font-size: 2.5vw;
+  color: rgba(84, 115, 126, 0.581);
+  padding: 3vw;
+  visibility: hidden;
+}
+
+main section#sobremim:hover h2.h2sobremim {
+  visibility: visible;
+}
+
+main section#sobremim div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3vw;
+  /* background-color: rgba(51, 54, 237, 0.542); */
+  /* background-color: rgb(26, 25, 28); */
+  border: 3px solid rgb(225, 98, 31);
+  border-radius: 3%;
+  width: 40vw;
+  margin-bottom: 5vw;
+}
+
+main section#sobremim div:hover {
+  box-shadow: 5px 10px 15px 5px rgba(251, 119, 79, 0.618);
+}
+
+main section#sobremim div h2 {
+  color: #42c920;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 1.3vw;
+  text-align: center;
+  padding: 1.5vw;
+  width: 40vw;
+  height: 12vw;
+  word-wrap: break-word;
+}
+
+main section#sobremim div:hover h2 {
+  font-size: 0;
+}
+
+main section#sobremim div:hover h2:after {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  content: attr(h2-hover);
+  color: rgb(236, 214, 67);
+  text-align: center;
+  font-size: 2vw;
+}
+
+main section#sobremim p {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  color: #42c920;
+  font-size: 1vw;
+  width: 40vw;
+  height: auto;
+  word-wrap: break-word;
+  padding: 0vw 3vw;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 800;
+}
+
+main section#sobremim div:hover p {
+  font-size: 0;
+  height: auto;
+  transition: 0s;
+}
+
+main section#sobremim div:hover p:after {
+  content: attr(sobremim-hover);
+  font-family: "Kdam Thmor Pro", sans-serif;
+  color: rgb(236, 214, 67);
+  font-size: 1.2vw;
+  height: auto;
+}
+
+@media (max-width: 700px) {
+  main section#sobremim div h2 {
+    visibility: hidden;
+    font-size: 0;
+  }
+
+  main section#sobremim div h2:after {
+    content: attr(h2-hover);
+    font-family: "Kdam Thmor Pro", sans-serif;
+    text-align: center;
+    font-size: 1.8vw;
+    visibility: visible;
+    color: rgb(236, 214, 67);
+  }
+
+  main section#sobremim p {
+    visibility: hidden;
+    font-size: 0;
+  }
+
+  main section#sobremim div p:after {
+    content: attr(sobremim-hover);
+    font-family: "Kdam Thmor Pro", sans-serif;
+    color: rgb(236, 214, 67);
+    font-size: 1.5vw;
+    visibility: visible;
+  }
+}
+
+main section#projetos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3vw;
+  background-color: rgb(39, 39, 42);
+}
+
+main section#projetos h2 {
+  padding: 2vw;
+  font-size: 2vw;
+  color: rgb(236, 214, 67);
+}
+
+main section#projetos div#div-projetos {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+main section#projetos div.proj {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid rgb(225, 98, 31);
+  border-radius: 6.5%;
+  margin: 3vw;
+  margin-bottom: 6vw;
+}
+
+main section#projetos div.proj:hover {
+  box-shadow: 5px 10px 15px 5px rgba(251, 119, 79, 0.618);
+}
+
+main section#projetos div.proj a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: rgb(219, 170, 24);
+  font-size: 1vw;
+  text-align: center;
+}
+
+main section#projetos div h2.proj-h2 {
+  color: rgb(236, 214, 67);
+  font-size: 1.8vw;
+}
+
+main section#projetos img.icone-proj {
+  width: 30%;
+}
+
+main section#tecnologias {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* background-color: rgb(95, 95, 118); */
+  padding: 3vw;
+}
+
+main section#tecnologias h2 {
+  font-size: 2vw;
+  color: aqua;
+}
+
+main section#tecnologias div#div-tecnologias {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3vw 3vw 0;
+  flex-wrap: wrap;
+}
+
+main section#tecnologias div.card {
+  position: relative;
+  width: 29vw;
+  height: 20vw;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+}
+
+main section#tecnologias div.card div.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  overflow: hidden;
+}
+
+main section#tecnologias div.card div.circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(230, 24, 195, 0.797);
+  clip-path: circle(1vw at center);
+  transition: 0.5s;
+}
+
+main section#tecnologias div.card:hover div.circle:before {
+  clip-path: circle(35vw at center);
+  background-color: rgba(40, 105, 170, 0.438);
+}
+
+main section#tecnologias div.card img.super {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9vw;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+main section#tecnologias div.card:hover img.super {
+  left: 72%;
+  width: 8vw;
+}
+
+main section#tecnologias div.card div.content {
+  position: relative;
+  width: 50%;
+  left: 20%;
+  padding: 1vw 1vw 1vw 2vw;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+main section#tecnologias div.card:hover div.content {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+main section#tecnologias div.card div.content h2 {
+  color: aqua;
+  text-transform: uppercase;
+  font-size: 0.8vw;
+  line-height: 1rem;
+  margin-bottom: 1vw;
+}
+
+main section#tecnologias div.card div.content p {
+  color: aqua;
+  font-size: 0.8vw;
+  font-weight: 600;
+}
+
+main section#tecnologias div.card div.content a {
+  color: white;
+  padding: 1vw 1.5vw;
+  font-size: 0.8vw;
+  border-radius: 10%;
+  background-color: rgb(219, 170, 24);
+  color: #111;
+  margin-top: 1vw;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+main section#contato {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: aqua;
+  font-size: 1.5vw;
+  padding: 2vw 0;
+}
+
+main section#contato div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2vw 0;
+  width: 100%;
+}
+
+main section#contato div a {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2vw;
+  text-decoration: none;
+  color: aqua;
+  font-size: 1vw;
+}
+
+main section#contato div a img {
+  width: 6vw;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(39, 39, 42);
+  color: rgba(255, 255, 0, 0.549);
+  font-size: 1vw;
+}
+
+footer p a {
+  text-decoration: none;
+  color: rgba(255, 255, 0, 0.549);
+}
